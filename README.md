@@ -4,7 +4,7 @@
 
 NCweb has been tested with PHP 7.2, Nginx 1.19.x, and Apache 2.x. It utilizes `sabre/dav` (client) and `PHP CommonMark` parser to do the heavy lifting. 
 
-#### IMPORTANT: :raised_hand: Exposing a folder of a Nextcloud instance as a public website MAY have security implications. NCweb does some basic attempts at sanitizing requests, but it relies on Nextcloud to handle malformed requests and die gracefully. If you are not sure this is up to your standards, DO NOT USE NCweb.
+#### IMPORTANT: :raised_hand: Exposing a folder of a Nextcloud instance using NCweb as a public website MAY have security implications. NCweb does some basic attempts at sanitizing requests, but it relies on Nextcloud to handle malformed requests and die gracefully. If you are not sure this is up to your standards, DO NOT USE NCweb.
 
 ### Installation
 
