@@ -38,6 +38,10 @@ There are a number of things that can go wrong, in particular when it comes to c
 
 Make sure that the document you're trying to request actually exist in the configured folder on the Nextcloud instance, and try reaching it using your configured URL/name_of_document.html or URL/name_of_document.md.
 
+### License
+
+**NCweb** is licensed under the BSD-3 license.  See the [`LICENSE`](LICENSE) file for more details.
+
 ### External references
 
 These links are not here for any sort of endorsement or marketing, they're purely for informational purposes.
