@@ -1,6 +1,6 @@
 [![Software License](https://img.shields.io/badge/License-BSD--3-brightgreen.svg?style=flat-square)](LICENSE)
 
-**NCweb** is a reasonably small (ish) PHP "application" that will allow you to expose a given folder of a Nextcloud instance and serve documents from it as if it would have been a regular website. The folder does not have to be shared in Nextcloud.
+**NCweb** is a reasonably small (ish) PHP "application" that will allow you to expose a given folder of a Nextcloud instance and serve documents from it as if it would have been a regular website. The folder does not have to be shared in Nextcloud. You can serve `.html` (HTML) or `.md` (Markdown) files. NCweb can be configured to `render Markdown` files to HTML.
 
 NCweb has been tested with PHP 7.2, Nginx 1.19.x, and Apache 2.x. It utilizes `sabre/dav` (client) and `PHP CommonMark` parser to do the heavy lifting. 
 
