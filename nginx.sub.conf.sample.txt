@@ -5,7 +5,12 @@
 # Configuration for NCweb at /ncweb
 
 location /ncweb {
+  # Where index.php is located physically on your server
   alias /home/html/yourdomain.com/public_html/ncweb;
+  
+  # Nginx will try to handle the request, or send it to 
+  # index.php, or rewrite the URL and send it to the @ncweb
+  # handler below
   try_files $uri index.php @ncweb;
 
   # Make sure we serve static content here, and not Nginx
@@ -25,6 +30,7 @@ location /ncweb {
                                                                                                                                     
 }                                                                                                                               
 
+# Rewrite handler to pass requested URL to index.php
 location @ncweb {
   rewrite /ncweb/(.*)$ /ncweb/index.php?/$1 last;
 }                                                                                                                               
