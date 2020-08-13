@@ -1,0 +1,30 @@
+# Sample Nginx configuration for running NCweb in a sub-directory
+# with PHP-FPM. This goes inside your server { } block. This will
+# handle requests to yourdomain.com/ncweb/*
+
+# Configuration for NCweb at /ncweb
+
+location /ncweb {
+  alias /home/html/yourdomain.com/public_html/ncweb;
+  try_files $uri index.php @ncweb;
+
+  # Make sure we serve static content here, and not Nginx
+  location ~* ^.+.(jpg|jpeg|gif|css|png|js|ico|htm|html|xml|pdf|ttf|woff|woff2|svg|eot)$ {
+    try_files   $uri @ncweb;
+  }
+
+  # Handle PHP
+  location ~ [^/]\.php(/|$) {
+    include fastcgi_params;
+
+    fastcgi_param SCRIPT_FILENAME $request_filename;
+
+    # Change this to the appropriate port for your PHP-FPM
+    fastcgi_pass 127.0.0.1:8002;
+  }                                                                                                                           
+                                                                                                                                    
+}                                                                                                                               
+
+location @ncweb {
+  rewrite /ncweb/(.*)$ /ncweb/index.php?/$1 last;
+}                                                                                                                               
