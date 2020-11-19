@@ -2,7 +2,7 @@
 
 **NCweb** is a reasonably small (ish) PHP "application" that will allow you to expose a given folder of a Nextcloud instance and serve documents from it as if it would have been a regular website. The folder does not have to be shared in Nextcloud. You can serve `.html` (HTML) or `.md` (Markdown) files. NCweb can be configured to `render Markdown` files to HTML.
 
-NCweb has been tested with PHP 7.2, Nginx 1.19.x, and Apache 2.x. It utilizes `sabre/dav` (client) and `PHP CommonMark` parser to do the heavy lifting. 
+NCweb has been tested with PHP 7.2, Nginx 1.19.x, and Apache 2.x. It utilizes `sabre/dav` (client) and `PHP CommonMark` parser to do the heavy lifting.
 
 #### IMPORTANT: :raised_hand: Exposing a folder of a Nextcloud instance using NCweb as a public website MAY have security implications. NCweb does some basic attempts at sanitizing requests, but it relies on Nextcloud to handle malformed requests and die gracefully. If you are not sure this is up to your standards, DO NOT USE NCweb.
 
@@ -49,4 +49,5 @@ These links are not here for any sort of endorsement or marketing, they're purel
 * PHP CommonMark parser; https://commonmark.thephpleague.com/
 * sabre/dav; https://sabre.io/
 * Nextcloud; https://nextcloud.com
-
+* me; https://joho.se and https://github.com/joho1968
+* WebbPlatsen; https://webbplatsen.se
